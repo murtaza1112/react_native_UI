@@ -1,35 +1,49 @@
-import React from 'react'
-import { StyleSheet, Text, View,Image } from 'react-native'
+import React from "react";
+import { StyleSheet, Text, View, Image } from "react-native";
+import colors from "../config/colors";
 
 export default function HomeScreen() {
-    return (
-      <View style={styles.container}>
-        <View styles={styles.midWrapper}>
-          <View title={styles.leftButton} />
-          <View title={styles.rightButton} />
-        </View>
-        <Image source={require("../assets/chair.jpg")} style={styles.image} />
+  console.log(colors);
+  return (
+    <View style={styles.container}>
+      <Image source={require("../assets/chair.jpg")} style={styles.image} />
+      <View style={styles.midWrapper}>
+        <View style={styles.leftButton} />
+        <View style={styles.rightButton} />
       </View>
-    );
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#FFFFFF",
-    width : '100%',
-    height: '100%'
+    backgroundColor: colors.black,
+    width: "100%",
+    height: "100%",
+    flex: 1,
+    justifyContent: "center",
   },
-  midWrapper:{
-    position : 'absolute',
-    top : '3%',
-    width: '100%',
-    flex : 1,
-    flexDirection : 'row',
-    justifyContent : 'space-around'
+  midWrapper: {
+    position: "absolute",
+    top: "5%",
+    width: "100%",
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-around",
   },
   leftButton: {
-    backgroundColor: "#fc5c65",
-    height: 40,
-    width: 40,
+    backgroundColor: colors.primary,
+    height: 45,
+    width: 45,
+  },
+  rightButton: {
+    backgroundColor: colors.secondary,
+    height: 45,
+    width: 45,
+  },
+  image: {
+    width: "100%",
+    height: "100%",
+    resizeMode: "contain",
   },
 });

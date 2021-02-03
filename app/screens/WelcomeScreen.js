@@ -13,6 +13,7 @@ import {
   Platform,
   ImageBackground,
 } from "react-native";
+import colors from "../config/colors";
 
 
 export default function WelcomeScreen() {
@@ -67,14 +68,14 @@ const styles = StyleSheet.create({
   firstButton: {
     height: 65,
     width: "100%",
-    backgroundColor: "#fc5c65",
+    backgroundColor: colors.primary,
     alignItems: "center",
     justifyContent: "center",
   },
   secondButton: {
     height: 65,
     width: "100%",
-    backgroundColor: "#4ecdc4",
+    backgroundColor: colors.secondary,
     alignItems: "center",
     justifyContent: "center",
   },
